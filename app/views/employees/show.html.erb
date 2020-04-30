@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Employee info</h1>
+
+<h4>
+First Name: <%=@employee.first_name%><br>
+Last Name: <%=@employee.last_name%><br>
+Alias: <%=@employee.alias%><br>
+Title: <%=@employee.title%><br>
+Office: <%=@employee.office%><br>
+
+<img src=@employee.img_url width="500" height="333"><br></h4>
+
+<h4>
+Dog:  <%= link_to Dog.find(@employee.dog_id).name, dog_path(@employee.dog_id)%></h4>
+</body>
+</html>
