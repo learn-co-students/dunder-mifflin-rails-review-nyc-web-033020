@@ -1,0 +1,11 @@
+<h1><%= @dog.name %> </h1>
+
+<h3><%= @dog.breed %> </h3>
+
+<h3><%= @dog.age %> </h3>
+
+<h4>My Owners</h4>
+
+<% @dog.find_my_owner.each do |owner | %>
+<p><%= link_to owner.first_name, employee_path(owner) %> </p>
+<%end%> 
