@@ -1,0 +1,11 @@
+<% if flash[:delete_message] %>
+  <%= flash[:delete_message] %>
+<% end %>
+
+<h1>Dunder Mifflin Staff:</h1>
+<% sorted_employees = @employees.sort_by { |employee| employee.last_name } %>
+<% sorted_employees.each do |employee| %>
+<ul>
+  <li><%= link_to employee.last_name_first_name, employee_path(employee) %></li>
+</ul>
+<% end %>
